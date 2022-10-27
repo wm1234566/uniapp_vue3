@@ -1,0 +1,39 @@
+<!--
+ * @Author: Wujie16 xx@email.com
+ * @Date: 2022-09-28 14:54:51
+ * @LastEditors: Wujie16 xx@email.com
+ * @LastEditTime: 2022-10-11 17:21:56
+ * @FilePath: \blog\index.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Wujie16 xx@email.com, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="no-referrer" />
+    <!-- <meta name="referrer" content="no-referrer" /> -->
+
+    <!-- <meta name="referrer" content="never" /> -->
+    <script>
+      var coverSupport =
+        "CSS" in window &&
+        typeof CSS.supports === "function" &&
+        (CSS.supports("top: env(a)") || CSS.supports("top: constant(a)"));
+      document.write(
+        '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
+          (coverSupport ? ", viewport-fit=cover" : "") +
+          '" />'
+      );
+    </script>
+
+    <title>吴先生的小程序</title>
+    <!--preload-links-->
+    <!--app-context-->
+  </head>
+  <body>
+    <div id="app"><!--app-html--></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

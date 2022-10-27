@@ -1,0 +1,136 @@
+/*
+ * @Author: Wujie16 xx@email.com
+ * @Date: 2022-09-28 14:54:51
+ * @LastEditors: Wujie16 xx@email.com
+ * @LastEditTime: 2022-10-15 08:51:29
+ * @FilePath: \blog\pages.json
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Wujie16 xx@email.com, All Rights Reserved. 
+ */
+{
+  "easycom": {
+    "custom": {
+      "^u-(.*)": "uview-plus/components/u-$1/u-$1.vue"
+    }
+  },
+
+  "pages": [  //主包
+    {
+      "path": "pages/hot/hot",
+      "style": {
+        "navigationBarTitleText": "热搜",
+        "enablePullDownRefresh": true,  // 开启下拉刷新
+        "app-plus": {             // 定制下拉圆圈
+          "pullToRefresh": {
+            "support": true,
+            "color": "#000000", //小圈圈的颜色
+            "style": "circle" //小圈圈的样式
+          }
+        }
+
+
+      }
+    },
+    {
+      "path": "pages/hot-video/hot-video",
+      "style": {
+        "navigationBarTitleText": "热播",
+        "enablePullDownRefresh": true,// 开启下拉刷新
+        "app-plus": {             // 定制下拉圆圈
+        "pullToRefresh": {
+          "support": true,
+          "color": "#240c0c", //小圈圈的颜色
+          "style": "circle" //小圈圈的样式
+        },
+        "onReachBottomDistance":true // 上拉加载更多
+      }
+
+       
+      }
+    },
+    {
+      "path": "pages/my/my",
+      "style": {
+        "navigationBarTitleText": "个人中心",
+        "enablePullDownRefresh": false
+      }
+    }
+  ],
+  "tabBar": {
+    "selectedColor": "#f94d2a",
+    "list": [
+      {
+        "pagePath": "pages/hot/hot",
+        "text": "热榜",
+        "iconPath": "static/tab-icons/hot.png",
+        "selectedIconPath": "static/tab-icons/hot-active.png"
+      },
+      {
+        "pagePath": "pages/hot-video/hot-video",
+        "text": "热播",
+        "iconPath": "static/tab-icons/hot-video.png",
+        "selectedIconPath": "static/tab-icons/hot-video-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/tab-icons/my.png",
+        "selectedIconPath": "static/tab-icons/my-active.png"
+      }
+    ]
+  },
+ 
+  "subPackages": [{
+      "root": "subpkg",
+      "name":"sub_1",  // 没有tabar
+       "pages": [
+       
+                {
+                    "path" : "search-blog/search-blog",  //文件路径是subpkg/search-blog/search-blog
+                    "style" :                                                                                    
+                        {
+                    "navigationBarTitleText": "搜索",  //搜索页面
+                    "enablePullDownRefresh": false,
+                    "onReachBottomDistance": 50 
+                     }
+                
+                }
+                    ,
+                {
+                  "path":"articles/articles",  //文件路径是subpkg/search-blog/search-blog
+                  "style" :                                                                                    
+                    {
+                  "navigationBarTitleText": "",  //文章详情
+                  "enablePullDownRefresh": false,
+                  "onReachBottomDistance": 50  //上拉监听
+                      }
+              
+                 }
+                 ,
+                 {
+                   "path":"video-details/index",  //文件路径是subpkg/search-blog/search-blog
+                   "style" :                                                                                    
+                     {
+                   "navigationBarTitleText": "", // 视频详情
+                   "enablePullDownRefresh": true,
+                   "onReachBottomDistance": 50  //上拉监听
+                       }
+               
+                  }
+            ]
+
+  }],
+
+
+
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "app-plus": {
+      "background": "#efeff4"
+    }
+  }
+}
